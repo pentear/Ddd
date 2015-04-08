@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/camera_menu_margin"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#e02f2f2f">
+
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/camera_button_margin"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera_back" />
+
+        <ImageButton
+            android:id="@+id/btnFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/camera_button_margin"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera_flash_auto" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/camera_menu_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="false"
+        android:background="#e02f2f2f">
+
+        <HorizontalScrollView
+            android:id="@+id/layoutImagesScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnCamera"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/layoutImages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"></LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera_button" />
+    </RelativeLayout>
+
+    <com.example.lqj.ddd.CameraSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/layoutTop"
+        android:layout_marginBottom="@dimen/camera_seekbar_margin_bottom"
+        android:layout_marginRight="@dimen/camera_seekbar_margin_left"
+        android:layout_marginTop="@dimen/camera_seekbar_margin_top"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/camera_seekbar_progress"
+        android:thumb="@drawable/camera_seekbar_thumb" />
+
+    <TextView
+        android:id="@+id/textViewImageCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_alignParentStart="true"
+        android:text="已拍0张"/>
+</RelativeLayout>

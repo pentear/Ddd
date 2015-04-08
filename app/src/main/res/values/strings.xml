@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ddd</string>
+    <string name="title_activity_camera_view">CameraView</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="button_camera">拍照</string>
+    <string name="button_camera_return">返回</string>
+    <string name="button_camera_delete">删除</string>
+</resources>
